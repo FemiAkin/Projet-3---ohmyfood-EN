@@ -35,6 +35,19 @@ body {
     justify-content: space-around;
 }
 
+.explore {
+    background-color: var(--secondary);
+    text-decoration: none;
+    display: inline-flex;
+    gap: 10px;
+    border: 1px transparent;
+    border-radius: 46px;
+    align-items: center;
+    padding-right: 15px;
+    font-size: medium;
+    justify-content: space-around;
+}
+
 .locale {
     background-color: #F2F2F2;
     display: flex;
@@ -71,6 +84,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.fa-regular fa-heart:hover {
+
 }
 
 footer {
