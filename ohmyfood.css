@@ -4,7 +4,11 @@
     --tertiary: #99E2D0;
 }
 
-
+body {
+    font-family: Roboto;
+    margin: 0px;
+    
+}
 
 .spacer {
     margin-bottom: 20px;
@@ -14,18 +18,17 @@
     gap: 30px;
 }
 
-body {
-    font-family: Roboto;
-    margin: 0px;
-    background-color: #fff;
-}
-
 .heading {
     font-family: Shrikhand;
 }
 
 .nav-header {
+    margin: 0 45px;
     box-shadow:  0 5px 15px 0 rgba(70, 70, 70, 0.1);
+}
+
+.container {
+    margin: 0 45px;
 }
 
 .logo {
@@ -51,6 +54,10 @@ body {
 .locale {
     background-color: #F2F2F2;
     display: flex;
+    padding: 30px;
+    justify-content: center;
+    
+    
 }
 
 .locale-p {
