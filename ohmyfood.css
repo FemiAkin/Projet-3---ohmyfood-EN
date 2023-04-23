@@ -7,7 +7,7 @@
 body {
     font-family: Roboto;
     margin: 0px;
-    
+
 }
 
 .spacer {
@@ -24,7 +24,7 @@ body {
 
 .nav-header {
     margin: 0 45px;
-    box-shadow:  0 5px 15px 0 rgba(70, 70, 70, 0.1);
+    box-shadow: 0 5px 15px 15 rgba(17, 16, 16, 0.1);
 }
 
 .container {
@@ -38,17 +38,24 @@ body {
     justify-content: space-around;
 }
 
+.book {
+    margin: 0 45px;
+
+}
+
 .explore {
     background-color: var(--secondary);
+    color: #f2f2f2;
     text-decoration: none;
     display: inline-flex;
     gap: 10px;
     border: 1px transparent;
     border-radius: 46px;
     align-items: center;
-    padding-right: 15px;
     font-size: medium;
     justify-content: space-around;
+    padding: 15px 25px;
+    box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
 }
 
 .locale {
@@ -56,8 +63,8 @@ body {
     display: flex;
     padding: 30px;
     justify-content: center;
-    
-    
+
+
 }
 
 .locale-p {
@@ -66,6 +73,44 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 50px;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    border: 1px transparent;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 15 px;
+    box-shadow: 0 5px 15px 0 rgba(18, 17, 17, 0.1);
+    display: flex;
+    
+    align-items: center;
+}
+
+.listnum {
+    padding: 5px 10px;
+    border: 1px transparent;
+    border-radius: 46px;
+    background-color: var(--primary);
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: -20px;
+    align-items: center;
+}
+
+.listnumitem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px;
+}
+
+.icon {
+    color: #525b6b;
 }
 
 .card img {
@@ -83,23 +128,20 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
-    
+
 }
 
-.card
-.card-body {
+.card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.fa-regular fa-heart:hover {
-
-}
+.fa-regular fa-heart:hover {}
 
 footer {
     background-color: black;
     font-style: #F2F2F2;
-    
+
 
 }
