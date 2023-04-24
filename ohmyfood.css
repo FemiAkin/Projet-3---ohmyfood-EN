@@ -84,7 +84,7 @@ body {
     border: 1px transparent;
     background-color: whitesmoke;
     border-radius: 20px;
-    padding: 15 px;
+    justify-content: flex-start;
     box-shadow: 0 5px 15px 0 rgba(18, 17, 17, 0.1);
     display: flex;
     
@@ -104,13 +104,19 @@ body {
 
 .listnumitem {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin: 40px;
+   
+    margin: 40px 40px;
 }
 
 .icon {
     color: #525b6b;
+}
+
+.list:hover {
+    background-color: rgb(222, 208, 222);
+    icon: var(--primary);
 }
 
 .card img {
@@ -131,17 +137,27 @@ body {
 
 }
 
-.card .card-body {
+.card-body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: baseline;
     justify-content: space-between;
+    text-decoration: none;
+}
+
+.card-descr {
+    text-decoration: none;
 }
 
 .fa-regular fa-heart:hover {}
 
 footer {
+    display: flex;
+    flex-direction: column;
+}
+.footerlinks {
     background-color: black;
-    font-style: #F2F2F2;
+    color: #F2F2F2;
 
 
 }
