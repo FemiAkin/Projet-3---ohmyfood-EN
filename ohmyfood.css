@@ -10,12 +10,17 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .spacer {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .gap {
-    gap: 30px;
+    gap: 15px;
 }
 
 .heading {
@@ -23,8 +28,9 @@ body {
 }
 
 .nav-header {
-    margin: 0 45px;
-    box-shadow: 0 5px 15px 15 rgba(17, 16, 16, 0.1);
+    box-shadow: 0 5px 15px 15px rgba(17, 16, 16, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -67,14 +73,6 @@ body {
 
 }
 
-.locale-p {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
-}
-
 .works {
     display: flex;
     flex-direction: column;
@@ -87,7 +85,7 @@ body {
     justify-content: flex-start;
     box-shadow: 0 5px 15px 0 rgba(18, 17, 17, 0.1);
     display: flex;
-    
+
     align-items: center;
 }
 
@@ -98,7 +96,7 @@ body {
     background-color: var(--primary);
     color: #f2f2f2;
     text-decoration: none;
-    margin: -20px;
+    margin: -15px;
     align-items: center;
 }
 
@@ -106,7 +104,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
     margin: 40px 40px;
 }
 
@@ -129,12 +127,22 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    border: 5px solid #F2F2F2;
-    background-color: #F2F2F2;
+    border: 5px solid #Fff;
+    background-color: #Fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
+    position: relative;
+}
 
+.card-new  {
+    background-color: var(--tertiary);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px 15px;
+    color: rgba(0,0,0, 0.4);
+    font-weight: bold;
 }
 
 .card-body {
@@ -149,15 +157,29 @@ body {
     text-decoration: none;
 }
 
-.fa-regular fa-heart:hover {}
+.card-body i {
+    fontsize: 15px;
+}
 
-footer {
+.ratingheart {
+    font-size: 20px;
+    align-items: baseline;
+}
+
+.ratingheart:hover {
+
+}
+
+.footer {
     display: flex;
     flex-direction: column;
-}
-.footerlinks {
     background-color: black;
+    
+}
+
+.footer a {
     color: #F2F2F2;
+
 
 
 }
