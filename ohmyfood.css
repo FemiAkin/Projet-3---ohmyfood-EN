@@ -170,6 +170,28 @@ a {
 
 }
 
+.menunav-header {
+
+    position: relative;
+    
+}
+
+.menucard {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #Fff;
+    background-color: #Fff;
+    overflow: hidden;
+    border-radius: 0;
+    position: relative;
+}
+
+.entreemenu {
+    width: 10px;
+    height: 5px;
+    background-color: var(--tertiary);
+}
+
 .footer {
     display: flex;
     flex-direction: column;
