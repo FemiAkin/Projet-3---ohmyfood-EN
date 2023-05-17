@@ -42,8 +42,12 @@ a {
 
 .container {
     margin: auto;
-    padding: 0 45px;
+    padding: 0 15px;
     max-width: 800px;
+}
+
+.no-gap {
+    padding: 0px;
 }
 
 .logo {
@@ -53,6 +57,12 @@ a {
     justify-content: space-around;
 }
 
+.bg-white {
+    background-color: #f5f5f5;
+    justify-content: center;
+    align-items: center;
+}
+
 .bg-grey {
     background-color: var(--grey);
     justify-content: center;
@@ -60,18 +70,18 @@ a {
 }
 
 .book {
-    background-color: var(--grey);
+    background-color: #f5f5f5;
     margin: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .discover {
     font-weight: lighter;
-    
+
 }
 
 .section {
@@ -88,7 +98,7 @@ a {
 
 .explore {
     background-color: var(--secondary);
-    background: linear-gradient(313deg, rgba(174,56,157,0.9094231442577031) 30%, rgba(255,121,218,1) 68%);
+    background: linear-gradient(313deg, rgba(174, 56, 157, 0.9094231442577031) 30%, rgba(255, 121, 218, 1) 68%);
 
     color: #f2f2f2;
     text-decoration: none;
@@ -101,12 +111,12 @@ a {
     justify-content: space-around;
     padding: 10px 15px;
     box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
-    width: 216px;
-    height: 52px;
+    width: 220px;
+    height: 50px;
 }
 
 .locale {
-    background-color: white;
+    background-color: var(--grey);
     display: flex;
     padding: 30px;
     justify-content: center;
@@ -140,6 +150,11 @@ a {
     align-items: center;
 }
 
+.go-enjoy {
+    background-color: #f0e0ee;
+}
+
+
 .listnumitem {
     display: flex;
     justify-content: space-between;
@@ -152,10 +167,10 @@ a {
     color: #525b6b;
 }
 
-.list:hover {
-    background-color: rgb(222, 208, 222);
-    
+.enjoy {
+    color: var(--primary);
 }
+
 
 .card img {
     width: 100%;
@@ -204,13 +219,41 @@ a {
 
 
 .ratingheart {
-    font-size: 20px;
-    align-items: baseline;
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
 }
 
-.ratingheart:hover {
-    color: white;
-    color: linear-gradient(313deg, rgba(174,56,157,0.9094231442577031) 30%, rgba(255,121,218,1) 68%);
+.heart-icon {
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+
+}
+
+.heart-empty {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.heart-full {
+    transition: opacity 1s;
+    opacity: 0;
+    background-image: linear-gradient(313deg, rgba(174, 56, 157, 0.9094231442577031) 30%, rgba(255, 121, 218, 1) 68%);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.ratingheart:hover .heart-full {
+    opacity: 1;
+}
+
+.ratingheart:hover .heart-empty {
+    opacity: 0;
 }
 
 .menunav-header {
@@ -253,6 +296,12 @@ a {
 
 }
 
+.footer-heading {
+    font-family: Shrikhand;
+    display: flex;
+    
+}
+
 .footer-list {
     display: flex;
     flex-direction: column;
@@ -264,7 +313,8 @@ a {
     margin-right: 10px;
 }
 
-.footer, .footer  a {
+.footer,
+.footer a {
     color: white;
 
 }
@@ -276,8 +326,94 @@ a {
 }
 
 .col {
-    flex: 1 0 0%;
+    flex: 1 0 100%;
+    padding: 15px;
 }
+
+.menu-item {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu-item__price {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-item:hover .menu-item__checkmark {
+    width: 75px;
+}
+
+.menu-item:hover .menu-item__checkmark-icon {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.menu-item__body {
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item__content,
+.menu-item__heading {
+    margin: 0;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu-item__heading {
+    font-size: 17px;
+}
+
+.menu-item__checkmark {
+    width: 0px;
+    background: var(--tertiary);
+    transition: width 1s;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-item__checkmark-icon {
+    transform: rotate(360deg);
+    transition: transform 1s;
+    color: white;
+}
+
+.order-menu {
+    background-color: var(--secondary);
+    background: linear-gradient(313deg, rgba(174, 56, 157, 0.9094231442577031) 30%, rgba(255, 121, 218, 1) 68%);
+    color: #f2f2f2;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    border: 1px transparent;
+    border-radius: 46px;
+    align-items: center;
+    font-size: medium;
+    justify-content: space-around;
+    padding: 10px 15px;
+    box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
+    width: 220px;
+    height: 50px;
+}
+
 
 @media screen and (min-width: 768px) {
     .col {
