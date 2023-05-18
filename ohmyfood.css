@@ -55,6 +55,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 }
 
 .bg-white {
@@ -217,6 +218,106 @@ a {
     margin: 0;
 }
 
+.menu--fade {
+	animation-name: menu-fade;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.menu--fade-1 {
+	animation-delay: 0.1s;
+}
+.menu--fade-2 {
+	animation-delay: 0.2s;
+}
+.menu--fade-3 {
+	animation-delay: 0.3s;
+}
+
+@keyframes menu-fade {
+  0% {
+    opacity: 0;
+		transform: translate(0, 200px);
+  }
+  100% {
+    opacity: 1;
+		transform: translate(0);
+  }
+}
+
+.loader {
+	background-color: blue;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: loader-fade;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	z-index: 1
+}
+
+@keyframes loader-fade {
+  0% {
+    opacity: 1;
+  }
+	99% {
+    opacity: 0;
+		top: 0;
+		bottom: 0;
+	}
+  100% {
+		top: -10000px;
+		bottom: auto;
+  }
+}
+
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .ratingheart {
     position: relative;
@@ -230,6 +331,14 @@ a {
     display: inline-block;
     height: 24px;
     width: 24px;
+
+}
+
+.heart-iconb {
+    position: absolute;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
 
 }
 
@@ -256,8 +365,14 @@ a {
     opacity: 0;
 }
 
+
+
 .menunav-header {
     position: relative;
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 .menucard {
@@ -396,6 +511,11 @@ a {
     color: white;
 }
 
+.order {
+    display: flex;
+    justify-content: space-around;
+}
+
 .order-menu {
     background-color: var(--secondary);
     background: linear-gradient(313deg, rgba(174, 56, 157, 0.9094231442577031) 30%, rgba(255, 121, 218, 1) 68%);
@@ -407,11 +527,12 @@ a {
     border-radius: 46px;
     align-items: center;
     font-size: medium;
-    justify-content: space-around;
+    justify-content:space-around;
     padding: 10px 15px;
     box-shadow: 0 5px 15px 0 rgba(70, 70, 70, 0.1);
     width: 220px;
     height: 50px;
+    margin-top: 25px;
 }
 
 
