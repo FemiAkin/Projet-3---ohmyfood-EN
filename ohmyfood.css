@@ -371,7 +371,7 @@ a {
     top: 0;
     left: 0;
     font-size: 25px;
-    
+
 }
 
 
@@ -456,7 +456,7 @@ a {
     flex-direction: column;
     gap: 10px;
     padding-bottom: 20px;
-    margin-left: 12px;
+    margin-left: 55px;
 }
 
 .icon-gap {
@@ -465,7 +465,7 @@ a {
 }
 
 .fa-handshake {
-    rotate: 45deg;
+    transform: rotate(135deg);
 }
 
 .footer,
